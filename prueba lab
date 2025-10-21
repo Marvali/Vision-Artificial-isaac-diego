@@ -1,0 +1,75 @@
+img=imread("Ej1_Imagen38.jpg")
+figure, imshow(img);
+info = imfinfo('Ej1_Imagen38.jpg');
+disp(['info', info.ColorType]);
+
+rojo = img(:,:,1);
+figure, imshow (rojo)
+title ("rojo");
+
+verde = img(:,:,2);
+figure, imshow (verde)
+title ("verde");
+
+
+azul = img(:,:,3);
+figure, imshow (azul)
+title ("azul");
+
+
+
+dos dos
+
+load("Ej2_Archivo38.mat")
+imagen=imagen_i;
+map1=[0.1 0.2 0.1;0.2 0.2 0.4 ;0.3 0.3 0.1; 0.5 0.6 0.3; 0.4 0.1 0.2; 0.2 0.1 0.3;0.2 0.1 0.4;0.2 0.4 0.1;0.1 0.3 0.2];
+map2=[0.1 0.2 0.5;0.7 0.7 0.6 ;0.3 0.8 0.1;0.1 0.2 0.5; 0.4 0.1 0.2; 0.2 0.1 0.3;0.1 0.2 0.4;0.9 0.1 0.3;0.1 0.2 0.5];
+map3=[0.1 0.2 0.1;0.2 0.2 0.4 ;0.3 0.3 0.1; 0.5 0.6 0.3; 0.4 0.1 0.2; 0.2 0.1 0.3;0.2 0.2 0.4;0.3 0.3 0.1;0.5 0.6 0.1];
+map4=[0.1 0.2 0.1;0.2 0.2 0.4 ;0.3 0.3 0.1; 0.5 0.6 0.3; 0.4 0.1 0.2; 0.2 0.1 0.3;0.7 0.7 0.8;0.9 0.8 0.8;1 0.7 0.9];
+map5=[0.7 0.6 0.5;0.8 0.9 0.4 ;0.3 0.3 0.1; 0.5 0.5 0.6; 0.8 0.19 0.22; 0.2 0.1 0.3;0.9 0.7 0.8;0.9 0.3 0.4;0.3 0.2 0.9];
+
+figure, imshow (imagen,map1);
+figure, imshow (imagen,map2);
+figure, imshow (imagen,map3);
+figure, imshow (imagen,map4);
+figure, imshow (imagen,map5);
+
+
+
+
+tres tres
+
+img=imread("Ej3_Imagen38.jpg")
+figure, imshow(img);
+
+imgplan=imread("Plantillafinal.jpg")
+figure, imshow(img);
+
+
+
+angulo = 270;
+
+% Rotación con Nearest (Vecino más Cercano) 
+% Es el método más rápido, pero con más artefactos (escalones).
+I_n = imrotate(imgplan, angulo, 'nearest');
+
+figure, imshow(I_n);
+
+I_reducida = imresize(I_n, [542, 1635]);
+
+
+figure, imshow(I_reducida);
+
+help imfuse
+
+fuse= imfuse(img,I_reducida);
+
+figure, imshow(fuse);
+
+
+
+
+
+
+
+tr
