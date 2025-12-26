@@ -1,0 +1,1 @@
+openExample('vision/PedestrianTrackingFromMovingCameraExample')
