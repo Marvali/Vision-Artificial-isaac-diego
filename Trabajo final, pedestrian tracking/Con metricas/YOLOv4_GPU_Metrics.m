@@ -1,7 +1,8 @@
 function PedestrianTrackingYOLOv4_Final_Expanded()
     % =========================================================================
     % TRABAJO FINAL DE VISIÓN ARTIFICIAL: SEGUIMIENTO DE PEATONES
-    % Autor(es): [Tu Nombre / Equipo]
+    % Autores: [ Diego Pena / Isaac Marval ]
+    % Gupo 24
     % Descripción: Sistema de seguimiento robusto basado en detección por Deep
     % Learning (YOLOv4) y filtrado de Kalman. Incluye evaluación cuantitativa
     % contra Ground Truth (Hito 4).
@@ -59,8 +60,8 @@ function PedestrianTrackingYOLOv4_Final_Expanded()
     end
 
     %% --- CONFIGURACIÓN DEL DETECTOR (YOLOv4) ---
-    % Se utiliza el modelo pre-entrenado 'csp-darknet53-coco'. Este modelo
-    % es el estado del arte en equilibrio velocidad/precisión para detección.
+    % Se utiliza el modelo pre-entrenado 'csp-darknet53-coco'. 
+    % Este modelo es el estado del arte en equilibrio velocidad/precisión para detección.
     name = 'csp-darknet53-coco'; 
     try
         detectorYOLO = yolov4ObjectDetector(name);
